@@ -1,0 +1,43 @@
+div.container div.section {
+  background-color:#efefef;
+  padding:20px;
+  border-radius:5px;
+}
+
+div.page-header {
+  margin-top:60px;
+}
+
+div.row {
+  margin-top:20px;
+}
+
+div.jumbotron {
+  color:white;
+  background-color:black;
+}
+
+.Text_gray {
+  color:darkgray;
+  text-decoration:none;
+  font-size:.7em;
+  font-style:normal;
+}
+
+ul.no-bullets {
+  list-style-type:none;
+  margin: 10px 0px 0px -40px;
+}
+
+ul.no-bullets li {
+  display:inline;
+  margin-left:10px;
+}
+
+div#Home {
+  margin-top:60px;
+}
+
+h3 {
+  margin-top:0;
+}

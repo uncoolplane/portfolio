@@ -1,428 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="rich">
 
 <head>
     <meta charset="utf-8">
     <title>Rebecca Hall</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/master.css">
 </head>
 
 <body>
-    <section class="hidden banner cf">
-        <div class="wrapper">
-            <p class="logo">rh</p>
-            <h1>Design.<br>Code.<br>Make.<br></h1>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a ui-sref="skills">Skills</a></li>
+                    <li><a ui-sref="projects">Projects</a></li>
+                    <li><a ui-sref="tools">Tools</a></li>
+                    <li><a ui-sref="journey">Learning Journey</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a ui-sref="settings">Settings</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </nav>
 
-    <header class="cover">
-        <div class="flex">
-            <h1 class="flex-item-1">Rebecca Hall</h1>
-            <div class="navbar flex flex-item-1">
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#links">Tools</a>
-                <a href="#journey">Journey</a>
-                <a href="#contact">Contact</a>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-sm-2 sidenav">
+                    <p><a href="#">Link</a></p>
+                    <p><a href="#">Link</a></p>
+                    <p><a href="#">Link</a></p>
+                </div>
+                <div class="col-sm-8 text-left">
+                    <h1>Welcome</h1>
+                    <ui-view></ui-view>
+                </div>
+                <div class="col-sm-2 sidenav">
+                    <div class="well">
+                        <p>Linked In</p>
+                    </div>
+                    <div class="well">
+                        <p>GitHub</p>
+                    </div>
+                </div>
             </div>
-
-            <a class="hamburger flex-item-1" href="#"><i class="fa fa-bars fa-3x" id="hamburger"></i></a>
         </div>
-    </header>
 
-    <div class="content">
-        <section class="work">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="card card_full">
-                        <div class="card_inner pink">
-                            <p>Design Resources</p>
-                            <h2>Meticulously Crafted</h2>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="card card_half left">
-                        <div class="card_inner green">
-                            <p>Design for Developers</p>
-                            <h2>Devs Learn Design</h2>
-                        </div>
-                    </div>
-                    <div class="card card_half right">
-                        <div class="card_inner purple">
-                            <p>Lol Colors</p>
-                            <h2>Curated Color Palettes</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="card card_third">
-                        <div class="card_inner blue">
-                            <p>Design Resources</p>
-                            <h2>Meticulously Crafted</h2>
-                        </div>
-                    </div>
-
-                    <div class="view_more">
-                        <p><a href="#">View More</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <a href="#" id="skills"></a>
-            <h2>Skills</h2>
-            <img class="hidden" id="landscape" src="images/TheWebAppLandscape.png" alt="Web App Landscape Diagram">
-
-            <div class="container">
-                <h3>Overview</h3>
-                <ul>
-                    <li class="score-0">0 - Unknown</li>
-                    <li class="score-1">1 - Heard of It</li>
-                    <li class="score-2">2 - Seen It</li>
-                    <li class="score-3">3 - Learned about It</li>
-                    <li class="score-4">4 - Used It</li>
-                    <li class="score-5">5 - Expert</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Basic Skills</h3>
-                <ul>
-                    <li class="score-4">CSS/CSS3
-                        <ul>
-                            <li class="score-2">SCSS</li>
-                            <li class="score-2">LESS</li>
-                        </ul>
-                    </li>
-                    <li class="score-5">HMTL/HTML5</li>
-                    <li class="score-4">Javascript/Javascript 5</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Interface</h3>
-                <ul>
-                    <li class="score-3">Bootstrap</li>
-                    <li class="score-0">Foundation</li>
-                    <li class="score-0">Ionic</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Interactivity</h3>
-                <ul>
-                    <li class="score-0">D3</li>
-                    <li class="score-4">JQuery</li>
-                    <li class="score-3">Underscore</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Client-side Applications</h3>
-                <ul>
-                    <li class="score-2">Angular</li>
-                    <li class="score-2">Backbone</li>
-                    <li class="score-0">Chaplin</li>
-                    <li class="score-2">Ember</li>
-                    <li class="score-0">Ext</li>
-                    <li class="score-0">Marionette</li>
-                    <li class="score-2">Reset.js</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Server-side application</h3>
-                <ul>
-                    <li class="score-2">Django (Python)</li>
-                    <li class="score-4">Java</li>
-                    <li class="score-4">.Net</li>
-                    <li class="score-3">Node.js</li>
-                    <li class="score-3">PHP</li>
-                    <li class="score-2">Ruby on Rails</li>
-                    <li class="score-4">Visual Basic / Lotusscript</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Database</h3>
-                <ul>
-                    <li class="score-2">MongoDB</li>
-                    <li class="score-3">MySQL</li>
-                    <li class="score-1">Neo4j</li>
-                    <li class="score-5">Lotus Notes</li>
-                    <li class="score-4">Oracle</li>
-                    <li class="score-3">PostgreSQL</li>
-                    <li class="score-4">SQL Server</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>BaaS</h3>
-                <ul>
-                    <li class="score-1">Firebase</li>
-                    <li class="score-0">Parse</li>
-                    <li class="score-0">MongoHQ</li>
-                    <li class="score-2">Neo4j</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>IDE / Tools</h3>
-                <ul>
-                    <li class="score-5">Lotus Notes</li>
-                    <li class="score-5">Outsystems</li>
-                    <li class="score-4">SQL Server Management</li>
-                    <li class="score-4">Visual Studio</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Repository</h3>
-                <ul>
-                    <li class="score-4">CVS</li>
-                    <li class="score-4">Git</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <a href="#" id="portfolio"></a>
-            <h2>Portfolio</h2>
-            <div class="container">
-                <h3>Outsystems</h3>
-                <ul>
-                    <li><a href="https://www.outsystems.com/forge/component/357/essentials">Outsystems Essentials</a></li>
-                    <li><a href="https://www.outsystems.com/forge/component/880/dynamic-soap/">Dynamic Soap</a></li>
-                    <li>Employee Access Request</li>
-                    <li>Employee Performance Dialogue</li>
-                    <li>File Repository</li>
-                    <li>Mobile Approval</li>
-                    <li>Supplier Chargeback</li>
-                    <li>Travel Request</li>
-                    <li>Workflow Automation</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Lotus Notes</h3>
-                <ul>
-                    <li>Capital Expenditure</li>
-                    <li>Employee Phone Book</li>
-                    <li>Document Library</li>
-                    <li>Supplier Chargeback</li>
-                    <li>Workflow Automation</li>
-                    <li>Patient Medical History</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Java Applications</h3>
-                <ul>
-                    <li>Dictionary/Acronmyn Library</li>
-                    <li>Discrete Shipping</li>
-                    <li>Employee Development Toolbox</li>
-                    <li>Machine Build Request</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <h3>Web Applications</h3>
-            </div>
-
-            <div class="container">
-                <h3>Mobile Applications</h3>
-                <ul>
-                    <li>*Recipe Box</li>
-                    <li>*Skill Assessment</li>
-                    <li>*Homework Tracker</li>
-                </ul>
-            </div>
-        </section>
-
-        <article>
-            <a href="#" id="links"></a>
-            <h3>Tools</h3>
-            <ul>
-                <li>Repository
-                    <ul>
-                        <li><a href="http://www.codepen.io " target="_blank ">CodePen</a></li>
-                        <li><a href="http://www.github.com " target="_blank ">GitHub</a></li>
-                        <li><a href="http://jsbin.com">JSBin</a></li>
-                    </ul>
-                </li>
-
-                <li>Training
-                    <ul>
-                        <li><a href="http://www.alistapart.com " target="_blank ">A List Apart</a></li>
-                        <li><a href="https://www.nofluffjuststuff.com" target="_blank">No Fluff Just Stuff</a></li>
-                        <li><a href="http://www.devmountain.com " taret="_blank ">DevMountain</a></li>
-                    </ul>
-                </li>
-
-                <li>Code Helpers
-                    <ul>
-                        <li><a href="http://www.picresizer.com " target="_blank ">Picture Resizer</a></li>
-                        <li><a href="http://www.poorsql.com " target="_blank ">SQL Formatter</a></li>
-                    </ul>
-                </li>
-
-                <li>Examples
-                    <ul>
-                        <li><a href="http://www.css-tricks.com " target="_blank ">CSS Tricks</a></li>
-                        <li><a href="http://www.csszengarden.com " target="_blank ">CSS Zen Garden</a></li>
-                    </ul>
-                </li>
-
-                <li>Picture Library
-                    <ul>
-                        <li><a href="http://www.unsplash.com">UnSplash</a></li>
-                        <li><a href="http://loremflickr.com/ " target="_blank ">Lorem Flikr</a></li>
-                        <li><a href="http://www.famfamfam.com/lab/icons/silk/">FamFamSilk</a></li>
-                    </ul>
-                </li>
-
-                <li>Libraries / Frameworks
-                    <ul>
-                        <li><a href="http://www.getbootstrap.com " taret="_blank ">Bootstrap</a></li>
-                        <li><a href="http://www.outsystems.com " taret="_blank ">Outsystems</a></li>
-                        <li><a href="http://underscorejs.org/">Underscore</a></li>
-                        <li><a href="https://angularjs.org/">Angular</a></li>
-                        <li><a href="http://www.material-ui.com/#/">Material UI</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </article>
-
-        <article class="">
-            <a href="#" id="journey"></a>
-            <h2>My Learning Journey</h2>
-
-            <h3>GitHub/Starter</h3>
-            <ul>
-                <li><a href="http://precourse.devmountain.com/challenges/">DevMountain Pre Course</a></li>
-                <li><a href="https://codepen.io/uncoolplane/pen/">Code Pen</a></li>
-                <li><a href="https://github.com/uncoolplane">Git Hub</a></li>
-                <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
-                <li><a href="http://getbootstrap.com/examples/theme/">Theme Template for Bootstrap</a></li>
-                <li><a href="https://github.com/devmountain/">DevMountain GitHub</a></li>
-            </ul>
-
-            <h3>CSS / HTML</h3>
-            <ul>
-                <li><a href="http://pipsum.com/">Pipsum - Easy Text/Image Placeholder Generator</a></li>
-                <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101">Command Line 101</a></li>
-                <li><a href="http://www.flexboxdefense.com/">Flexbox Defense</a></li>
-                <li><a href="http://www.bobrosslipsum.com/">Bob Ross Lipsum</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts">CSS Multi-column Layouts</a></li>
-                <li><a href="https://source.unsplash.com/">Unsplash</a></li>
-                <li><a href="https://fonts.google.com/">Google Fonts</a></li>
-                <li><a href="https://developers.google.com/maps/documentation/embed/guide?authuser=1">Google Maps API</a></li>
-                <li><a href="http://fontawesome.io/examples/">Font Awesome</a></li>
-                <li><a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a></li>
-                <li><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">CSS Selectors You Must Memorize</a></li>
-                <li><a href="https://coolors.co/fcfcfc-f7567c-fffae3-99e1d9-5d576b">Website Color Generator</a></li>
-                <li><a href="http://css3buttongenerator.com/">CSS Button Generator</a></li>
-                <li>
-                    <h4>YouTube</h4>
-                    <ul>
-                        <li><a href="https://www.youtube.com/watch?v=Wm6CUkswsNw&list=PLY6FlUuCtmZoOSrSXXhsfEhNve6Wl-OaI&index=7">Build an HTML5 Website with a Responsive Layout</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Javasript</h3>
-            <ul>
-                <li><a href="http://www.pythontutor.com/visualize.html#">Visualize Python/Javascript</a></li>
-                <li><a href="http://eloquentjavascript.net/03_functions.html">Functions-Eloquent Javascript</a></li>
-                <li><a href="https://css-tricks.com/codekit-2-0/">CSS-Tricks-CodeKit 2.0</a></li>
-                <li><a href="http://placehold.it/">Placehold-it - Simple Image Placeholders</a></li>
-                <li><a href="http://lewagon.github.io/ui-components/">Le-Wagon UI Components</a></li>
-                <li><a href="https://www.codewars.com/dashboard">Codewars</a></li>
-                <li>
-                    <a href="https://codecombat.com/play"></a>
-                </li>
-                <li><a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">Javascript Closures</a></li>
-                <li><a href="https://toddmotto.com/mastering-the-module-pattern/">Mastering the Module Pattern</a></li>
-                <li><a href="https://autotelicum.github.io/Smooth-CoffeeScript/literate/js-intro.html">Javascript Basics</a></li>
-                <li><a href="http://www.w3schools.com/jsref/jsref_forEach.asp">Javascript Array.forEach</a></li>
-                <li><a href="https://github.com/jashkenas/underscore/blob/master/underscore.js">Underscore.js</a></li>
-                <li><a href="https://www.youracclaim.com/org/devmountain/badge/javascript-web-development">Javascript Web Development</a></li>
-                <li><a href="http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/">Javascript Apply, Call, Bind</a></li>
-                <li><a href="https://davidwalsh.name/merge-arrays-javascript">Merge Arrays with Javascript</a></li>
-                <li><a href="https://davidwalsh.name/essential-javascript-functions">7 Essential Javascript Functions</a></li>
-                <li>
-                    <h4>YouTube</h4>
-                    <ul>
-                        <li><a href="https://www.youtube.com/watch?v=DIVfDZZeGxM">Learn Javascript by Building a Bookmarker App</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Rx_JFOSxgpY">15+ Tricks to be an Array Expert</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=71AtaJpJHw0">JavaSript Closure Tutorial</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=O8wwnhdkPE4">Object Oriented Javascript</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=9hDKfBKuXjI">Web Development in 2017 - A Practical Guide</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>JQuery</h3>
-            <ul>
-                <li><a href="https://jquery.com/">JQuery</a></li>
-                <li><a href="http://diveintohtml5.info/storage.html">Local Storage with HTML 5</a></li>
-                <li><a href="http://www.asmarterwaytolearn.com/jquery/index-of-exercises.html">Smarter Way to Learn JQuery</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/DOM_events#Common.2FW3C_events">DOM Events</a></li>
-                <li><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">CSS Selectors</a></li>
-
-                <li>
-                    <h4>YouTube</h4>
-                    <ul>
-                        <li><a href="https://www.youtube.com/playlist?list=PLoYCgNOIyGABdI2V8I_SWo22tFpgh2s6_">JQuery Tutorial for Beginners</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Angular JS</h3>
-            <ul>
-              <li><a href="https://docs.angularjs.org/tutorial/">Angular JS Tutorial</a></li>
-              <li><a href="https://docs.angularjs.org/api">Angular JS API</a></li>
-              <li><a href="https://jeffshamley.com/blogs/dynamically-filtering-lists-angularjs">Dynamic Filtering Lists in AngularJS</a></li>
-              <li><a href="http://www.w3schools.com/angular/default.asp">W3 AngularJS Tutorial</a></li>
-              <li><a href="https://www.cheatography.com/proloser/cheat-sheets/angularjs/">Angular JS Cheat Sheet</a></li>
-              <li><a href="http://jeremylikness.github.io/AngularTipsAndTricks/index.html">Angular Tips and Tricks</a></li>
-              <li><a href="https://codepen.io/DevelopIntelligenceBoulder/pen/rewObY/">Angular JS Class Conditional</a></li>
-              <li><a href="http://beta.json-generator.com/">JSON Data Generator</a></li>
-              <li><a href="https://scotch.io/tutorials/angularjs-form-validation">Angular JS Form Validation</a></li>
-              <li>
-                <h4>Youtube</h4>
-                <ul>
-                  <li><a href="https://egghead.io/courses/angularjs-app-from-scratch-getting-started">Angular JS Fundamentals (EggHead.io)</a></li>
-                </ul>
-              </li>
-            </ul>
-        </article>
-
-        <aside class="">
-            <a href="#" id="contact"></a>
-            <h2>Contact Me</h2>
-            <ul>
-                <li>
-                    <a href="https://www.outsystems.com/profile/6517/rebecca-hall/ " target="_blank "><img src="http://www.outsystems.com/PortalTheme/img/NewOSLogoWhite.png " style="height:30px;background-color:black; "></a>
-                </li>
-                <li><a href="https://www.facebook.com/uncoolplane " target="_blank "><i class="fa fa-2x fa-facebook "></i>Facebook</a></li>
-                <li><a href="https://twitter.com/@uncoolplane " target="_blank "><i class="fa fa-2x fa-twitter "></i>Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/computermomx2/ " target="_blank "><i class="fa fa-2x fa-linkedin "></i>Linked In</a></li>
-                <li><a href="https://plus.google.com/+RebeccaHalluncoolplane " target="_blank "><i class="fa fa-2x fa-google "></i>Google+</a></li>
-                <li><a href="https://github.com/uncoolplane " target="_blank "><i class="fa fa-2x fa-github "></i>GitHub</a></li>
-            </ul>
-        </aside>
-    </div>
-
-    <footer>
-
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
     </footer>
 
-    <script src="https://use.fontawesome.com/e0499a8d22.js"></script>
+    <!--Libraries-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js" charset="utf-8"></script>
+
+    <!--Application-->
+    <script src="js/app.js" charset="utf-8"></script>
 </body>
 
 </html>
